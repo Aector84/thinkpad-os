@@ -100,12 +100,19 @@ Clone the repository:
 git clone https://github.com/Aector84/thinkpad-os.git
 cd thinkpad-os
 
+Install in editable mode:
+
 pip install --user -e .
+
+Ensure your local bin path is available:
 
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
+Launch the ecosystem:
+
 thinkos
+
 
 
 ---
