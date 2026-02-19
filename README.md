@@ -92,51 +92,67 @@ Or simply run:
 
 # 📦 Installation
 
-## Install via pip (Recommended)
-
-Clone the repository:
+## 🚀 Install via pip (Recommended)
 
 ```bash
 git clone https://github.com/Aector84/thinkpad-os.git
 cd thinkpad-os
-
-Install in editable mode:
-
 pip install --user -e .
-
-Ensure your local bin path is available:
-
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
-
-Launch the ecosystem:
-
-thinkos
-
-
-
----
-
-#Launch the ecosystem:
-
-```bash
 thinkos
 ```
 
 ---
 
-## 🧠 Usage
+## 🖥 System Requirements
 
-| Command | Description |
-|----------|-------------|
-| `thinkos` | Master launcher |
-| `rain` | ThinkRain animation |
-| `tpvid` | ThinkTube |
-| `tpr` | ThinkReddit |
-| `tpc` | Commander file manager |
-| `mam` | Media browser |
-| `tphelp` | Command dashboard |
-| `nexus` | Nexus interface |
+- Python 3.10+
+- mpv
+- yt-dlp
+- git
+
+### Fedora:
+
+```bash
+sudo dnf install mpv yt-dlp git
+```
+
+---
+
+## 🔄 Updating ThinkPad OS
+
+```bash
+cd ~/thinkpad-os
+./update.sh
+```
+
+---
+
+## 🧹 Uninstall
+
+```bash
+pip uninstall thinkpad-os
+```
+
+---
+
+## 🎮 Available Commands
+
+```bash
+thinkos   # Master launcher
+rain      # ThinkRain cinematic engine
+tpvid     # ThinkTube streaming client
+tpr       # ThinkReddit viewer
+tpc       # ThinkPad Commander file manager
+mam       # Media browser
+tphelp    # Interactive command dashboard
+```
+
+
+
+
+
 
 ---
 
