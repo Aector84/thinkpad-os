@@ -16,42 +16,43 @@ ThinkPad OS consolidates multiple custom TUIs into one master launcher called **
 
 ThinkPad OS is a modular terminal ecosystem featuring:
 
-- 🌧 **ThinkRain** — Cinematic ThinkPad rain engine
-- 📺 **ThinkTube** — Terminal YouTube streaming client (mpv powered)
-- 📰 **ThinkReddit** — Reddit browser with image preview
-- 📁 **Commander (TPC)** — ThinkPad-style file manager
-- 🎵 **M.A.M** — Media browser
-- 🧠 **TPHelp** — Interactive command dashboard
-- 🛰 **Nexus** — Sci-fi control interface
-- 🖥 **ThinkOS** — Master launcher & control layer
+- 🌧 **ThinkRain** — Cinematic ThinkPad rain engine  
+- 📺 **ThinkTube** — Terminal YouTube streaming client (mpv powered)  
+- 📰 **ThinkReddit** — Reddit browser with image preview  
+- 📁 **Commander (TPC)** — ThinkPad-style file manager  
+- 🎵 **M.A.M** — Media browser  
+- 🧠 **TPHelp** — Interactive command dashboard  
+- 🛰 **Nexus** — Sci-fi control interface  
+- 🖥 **ThinkOS** — Master launcher & control layer  
 
 ---
 
 ## 🏗 Architecture
 
+```
 thinkpad-os/
 │
-├── thinkos/ # Master launcher
-├── thinkrain/ # Cinematic animation engine
-├── thinktube/ # YouTube streaming TUI
-├── tpr/ # Reddit client
-├── tpc/ # File manager
-├── mam/ # Media manager
-├── tphelp/ # Interactive dashboard
-├── nexus/ # Themed command interface
+├── thinkos/      # Master launcher
+├── thinkrain/    # Cinematic animation engine
+├── thinktube/    # YouTube streaming TUI
+├── tpr/          # Reddit client
+├── tpc/          # File manager
+├── mam/          # Media manager
+├── tphelp/       # Interactive dashboard
+├── nexus/        # Themed command interface
 │
 ├── install.sh
 ├── requirements.txt
 └── README.md
-
+```
 
 Built using:
 
-- Python 3
-- Textual
-- Rich
-- mpv
-- yt-dlp
+- Python 3  
+- Textual  
+- Rich  
+- mpv  
+- yt-dlp  
 
 ---
 
@@ -63,107 +64,148 @@ Fedora:
 
 ```bash
 sudo dnf install mpv yt-dlp git
+```
 
-Debian/Ubuntu:
+Debian / Ubuntu:
 
+```bash
 sudo apt install mpv yt-dlp git
+```
 
-Python Dependencies
+---
 
+### Python Dependencies
+
+```bash
 pip install --user textual rich psutil requests yt-dlp
+```
 
 Or simply run:
 
+```bash
 ./install.sh
+```
 
-🚀 Installation
+---
 
+## 🚀 Installation
+
+```bash
 git clone https://github.com/Aector84/thinkpad-os.git
 cd thinkpad-os
 chmod +x install.sh
 ./install.sh
+```
 
 Launch the ecosystem:
 
+```bash
 thinkos
+```
 
-🧠 Usage
-Command	Description
-thinkos	Master launcher
-rain	ThinkRain animation
-tpvid	ThinkTube
-tpr	ThinkReddit
-tpc	Commander file manager
-mam	Media browser
-tphelp	Command dashboard
-nexus	Nexus interface
-🎛 Controls
+---
+
+## 🧠 Usage
+
+| Command | Description |
+|----------|-------------|
+| `thinkos` | Master launcher |
+| `rain` | ThinkRain animation |
+| `tpvid` | ThinkTube |
+| `tpr` | ThinkReddit |
+| `tpc` | Commander file manager |
+| `mam` | Media browser |
+| `tphelp` | Command dashboard |
+| `nexus` | Nexus interface |
+
+---
+
+## 🎛 Controls
 
 Most applications use:
 
-    ↑ ↓ Arrow navigation
+- ↑ ↓ Arrow navigation  
+- Enter to select  
+- `q` to quit  
 
-    Enter to select
+---
 
-    q to quit
+## 🖼 Screenshots
 
-🖼 Screenshots
-
-Add screenshots here for visual preview.
+_Add screenshots here for visual preview._
 
 Example:
 
+```
 ![ThinkOS](assets/thinkos.png)
 ![ThinkRain](assets/thinkrain.gif)
+```
 
-🛠 Troubleshooting
-Command Not Found
+---
 
-Ensure ~/.local/bin is in your PATH:
+## 🛠 Troubleshooting
 
+### Command Not Found
+
+Ensure `~/.local/bin` is in your PATH:
+
+```bash
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
+```
 
-Textual Errors
+---
+
+### Textual Errors
 
 Update textual:
 
+```bash
 pip install --user --upgrade textual
+```
 
-mpv Opens Fullscreen
+---
+
+### mpv Opens Fullscreen
 
 ThinkTube should use:
 
+```
 --no-fullscreen
 --geometry=960x540
+```
 
-🛣 Roadmap
+---
 
-    Shared theme engine
+## 🛣 Roadmap
 
-    Plugin architecture
+- [ ] Shared theme engine  
+- [ ] Plugin architecture  
+- [ ] Auto-update system  
+- [ ] RPM packaging  
+- [ ] pip package release  
+- [ ] Cross-distro compatibility  
+- [ ] Config file support  
+- [ ] Animated ThinkOS splash  
 
-    Auto-update system
+---
 
-    RPM packaging
-
-    pip package release
-
-    Cross-distro compatibility
-
-    Config file support
-
-    Animated ThinkOS splash
-
-🤝 Contributing
+## 🤝 Contributing
 
 Pull requests are welcome.
 
 For major changes, open an issue first to discuss what you would like to change.
-📜 License
+
+---
+
+## 📜 License
 
 MIT License
-👤 Author
 
-Built by Tony
+---
+
+## 👤 Author
+
+Built by Tony  
 Inspired by classic ThinkPad aesthetics.
+
