@@ -132,14 +132,9 @@ Most applications use:
 
 ## 🖼 Screenshots
 
-_Add screenshots here for visual preview._
+---
 
-Example:
-
-```
-![ThinkOS](assets/thinkos.png)
-![ThinkRain](assets/thinkrain.gif)
-```
+<img width="1920" height="1080" alt="Screenshot_20260218_005904" src="https://github.com/user-attachments/assets/ec5f3713-9718-4e88-8c99-8d3f2a4802b2" />
 
 ---
 
