@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+
+clear
+echo
+center_text "$LOGO"
+echo
+center_text "Weyland-Yutani Unified Command Interface"
+echo
+divider
+echo
+
+center_text() {
+  local term_width=$(tput cols)
+  while IFS= read -r line; do
+    printf "%*s
+" $(((${#line} + term_width) / 2)) "$line"
+  done <<< "$1"
+}
+
+divider() {
+  printf "%*s
+" "$(tput cols)" "" | tr " " "─"
+}
+
+
+ACCENT="\033[38;5;111m"
+TEXT="\033[38;5;245m"
+RESET="\033[0m"
+
+center_block() {
+  local block="$1"
+  local term_width=$(tput cols)
+
+  # Find longest line in block
+  local max_width=0
+  while IFS= read -r line; do
+    [ ${#line} -gt $max_width ] && max_width=${#line}
+  done <<< "$block"
+
+  local padding=$(( (term_width - max_width) / 2 ))
+
+  while IFS= read -r line; do
+    printf "%*s%s\n" $padding "" "$line"
+  done <<< "$block"
+}
+
+
+while true; do
+  echo
+  draw_divider
+  echo
+
+  center_block "1) Fleet Registry"
+  center_block "2) Mother Mainframe"
+  center_block "3) Command Centre"
+  center_block "4) Tactical Bridge"
+  center_block "5) Hyperspace"
+  center_block "6) Fast2"
+  center_block "7) Thinkfast"
+  center_block "8) Weyland1"
+  center_block "9) Exit"
+
+  echo
+  draw_divider
+  echo
+
+  printf "Select Option > "
+  read choice
+
+  case "$choice" in
+    1) ships ;;
+    2) mother ;;
+    3) cmdcentre ;;
+    4) cmdcentre-bridge ;;
+    5) space ;;
+    6) fast2 ;;
+    7) thinkfast ;;
+    8) weyland1 ;;

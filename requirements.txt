@@ -1,0 +1,5 @@
+textual
+psutil
+requests
+rich
+yt-dlp
