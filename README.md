@@ -95,7 +95,25 @@ git clone https://github.com/Aector84/thinkpad-os.git
 cd thinkpad-os
 chmod +x install.sh
 ./install.sh
-```
+
+``# 📦 Installation
+
+## Install via pip (Recommended)
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Aector84/thinkpad-os.git
+cd thinkpad-os
+
+`pip install --user -e .
+
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+thinkos
+
+---
 
 Launch the ecosystem:
 
