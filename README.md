@@ -1,195 +1,169 @@
-📘 README.md (Copy Everything Below)
-# 🟥 ThinkPad OS — Terminal Ecosystem
+# 🟥 ThinkPad OS
+
+![Version](https://img.shields.io/badge/version-v1.0.0-red)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Platform](https://img.shields.io/badge/platform-Linux-black)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-active-success)
 
 A unified ThinkPad-inspired terminal operating environment built with Python + Textual.
 
-ThinkPad OS consolidates multiple custom TUIs into one master launcher:
-
-- 🌧 ThinkRain — Cinematic ThinkPad rain animation
-- 📺 ThinkTube — Terminal YouTube streaming client
-- 📰 ThinkReddit — Reddit viewer with image support
-- 📁 Commander (TPC) — File manager
-- 🎵 M.A.M — Media browser
-- 🧠 TPHelp — Interactive command dashboard
-- 🛰 Nexus — Sci-fi themed control interface
-- 🖥 ThinkOS — Master launcher
+ThinkPad OS consolidates multiple custom TUIs into one master launcher called **ThinkOS**.
 
 ---
 
-## ✨ Features
+## ✨ What Is ThinkPad OS?
 
-- Unified ThinkOS launcher
-- Global command installation
-- ThinkPad red / IBM blue aesthetic
-- Textual-based responsive TUIs
-- YouTube playback via `mpv`
-- Kitty image protocol support
-- Rain animation engine
-- Modular architecture
-- Fully open-source
+ThinkPad OS is a modular terminal ecosystem featuring:
+
+- 🌧 **ThinkRain** — Cinematic ThinkPad rain engine
+- 📺 **ThinkTube** — Terminal YouTube streaming client (mpv powered)
+- 📰 **ThinkReddit** — Reddit browser with image preview
+- 📁 **Commander (TPC)** — ThinkPad-style file manager
+- 🎵 **M.A.M** — Media browser
+- 🧠 **TPHelp** — Interactive command dashboard
+- 🛰 **Nexus** — Sci-fi control interface
+- 🖥 **ThinkOS** — Master launcher & control layer
+
+---
+
+## 🏗 Architecture
+
+thinkpad-os/
+│
+├── thinkos/ # Master launcher
+├── thinkrain/ # Cinematic animation engine
+├── thinktube/ # YouTube streaming TUI
+├── tpr/ # Reddit client
+├── tpc/ # File manager
+├── mam/ # Media manager
+├── tphelp/ # Interactive dashboard
+├── nexus/ # Themed command interface
+│
+├── install.sh
+├── requirements.txt
+└── README.md
+
+
+Built using:
+
+- Python 3
+- Textual
+- Rich
+- mpv
+- yt-dlp
 
 ---
 
 ## 📦 Requirements
 
-### System Requirements
-- Linux (Tested on Fedora)
-- Python 3.10+
-- pip
+### System Dependencies
 
-### Required System Packages
+Fedora:
 
 ```bash
 sudo dnf install mpv yt-dlp git
 
+Debian/Ubuntu:
 
-(Use your distro’s equivalent if not Fedora)
+sudo apt install mpv yt-dlp git
 
-🐍 Python Dependencies
-
-Installed automatically via install.sh, but listed here:
-
-textual
-
-rich
-
-psutil
-
-requests
-
-yt-dlp
-
-Manual install if needed:
+Python Dependencies
 
 pip install --user textual rich psutil requests yt-dlp
 
+Or simply run:
+
+./install.sh
+
 🚀 Installation
 
-Clone the repository:
-
-git clone https://github.com/YOUR_USERNAME/thinkpad-os.git
+git clone https://github.com/Aector84/thinkpad-os.git
 cd thinkpad-os
-
-
-Run installer:
-
 chmod +x install.sh
 ./install.sh
 
-
-Then launch:
+Launch the ecosystem:
 
 thinkos
 
 🧠 Usage
-
-Launch master control:
-
-thinkos
-
-
-Or run individual tools:
-
-Command	Tool
-rain	ThinkRain
+Command	Description
+thinkos	Master launcher
+rain	ThinkRain animation
 tpvid	ThinkTube
 tpr	ThinkReddit
-tpc	Commander
-mam	Media Manager
-tphelp	Help Dashboard
-nexus	Nexus Control
+tpc	Commander file manager
+mam	Media browser
+tphelp	Command dashboard
+nexus	Nexus interface
 🎛 Controls
 
-Most TUIs support:
+Most applications use:
 
-↑ ↓ Arrow navigation
+    ↑ ↓ Arrow navigation
 
-Enter to select
+    Enter to select
 
-q to quit
+    q to quit
 
-ThinkTube:
+🖼 Screenshots
 
-Search YouTube
+Add screenshots here for visual preview.
 
-Playlist support
+Example:
 
-mpv mini-player mode
-
-ThinkRain:
-
-Animated gradient rain
-
-Cinematic mode toggle
+![ThinkOS](assets/thinkos.png)
+![ThinkRain](assets/thinkrain.gif)
 
 🛠 Troubleshooting
 Command Not Found
 
 Ensure ~/.local/bin is in your PATH:
 
-echo $PATH
-
-
-If not:
-
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
+Textual Errors
+
+Update textual:
+
+pip install --user --upgrade textual
+
 mpv Opens Fullscreen
 
-Ensure ThinkTube uses:
+ThinkTube should use:
 
 --no-fullscreen
 --geometry=960x540
 
-Kitty Image Mode Not Working
-
-Make sure you are using Kitty terminal.
-Image preview requires Kitty graphics protocol.
-
-Textual CSS Errors
-
-Ensure you are using latest textual:
-
-pip install --user --upgrade textual
-
-🧱 Project Structure
-thinkpad-os/
-│
-├── thinkos/
-├── thinkrain/
-├── thinktube/
-├── tpr/
-├── tpc/
-├── mam/
-├── tphelp/
-├── nexus/
-│
-├── install.sh
-├── requirements.txt
-└── README.md
-
 🛣 Roadmap
 
- Shared theme engine
+    Shared theme engine
 
- Plugin architecture
+    Plugin architecture
 
- RPM packaging
+    Auto-update system
 
- Auto-update system
+    RPM packaging
 
- Config file support
+    pip package release
 
- Cross-distro support
+    Cross-distro compatibility
 
- Boot splash animation
+    Config file support
 
-🧑‍💻 Author
+    Animated ThinkOS splash
 
-Built by Tony
-Inspired by classic ThinkPad aesthetics.
+🤝 Contributing
 
+Pull requests are welcome.
+
+For major changes, open an issue first to discuss what you would like to change.
 📜 License
 
 MIT License
+👤 Author
+
+Built by Tony
+Inspired by classic ThinkPad aesthetics.
